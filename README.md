@@ -1,4 +1,4 @@
-# wildfire
+# Wild Chefs!!
 
 ## One place to share new or authentic recipes to people all around the world.
 
