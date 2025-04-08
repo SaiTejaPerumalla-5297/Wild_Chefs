@@ -8,3 +8,36 @@ body{
     background-color: aliceblue;
     text-align: center;
 }
+
+/* styles.css */
+.fancy-link {
+    position: relative;
+    display: inline-block;
+    color: #1d4ed8; /* Tailwind blue-700 */
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+  }
+  
+  .fancy-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #1d4ed8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .fancy-link:hover {
+    color: #2563eb; /* Tailwind blue-600 */
+  }
+  
+  .fancy-link:hover::after {
+    transform: scaleX(1);
+  }
+  
