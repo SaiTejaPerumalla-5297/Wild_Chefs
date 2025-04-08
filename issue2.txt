@@ -1,1 +1,0 @@
-Rephrased queries for better optimization
