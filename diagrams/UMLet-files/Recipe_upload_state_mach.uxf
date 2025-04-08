@@ -114,13 +114,13 @@ saved</panel_attributes>
     <coordinates>
       <x>560</x>
       <y>110</y>
-      <w>230</w>
-      <h>250</h>
+      <w>210</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 edit and retry</panel_attributes>
-    <additional_attributes>100.0;230.0;130.0;160.0;130.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>190.0;110.0;160.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -143,5 +143,29 @@ edit and retry</panel_attributes>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>710</x>
+      <y>220</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Error Handler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>250</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+
+Logs error &amp; Notify User</panel_attributes>
+    <additional_attributes>10.0;90.0;70.0;10.0</additional_attributes>
   </element>
 </diagram>
