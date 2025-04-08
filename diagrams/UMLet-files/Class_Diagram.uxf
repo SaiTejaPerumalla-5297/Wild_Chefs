@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>175</x>
+      <y>175</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Recipe
+--
+- int id
+- String title
+- List~String~ ingredients
+- String instructions
+- float rating
+--
+ + publish()
+ + archive()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>182</x>
+      <y>0</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-int id
+-String name
+-String email
+--
++ submitRecipe()
++ commentOnRecipe()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>238</x>
+      <y>112</y>
+      <w>56</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2=
+		Submits</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>287</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2=
+		Has</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>175</x>
+      <y>350</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+- int id
+- String title
+- List~String ingredients
+- String instructions
+- float rating
+--
+ + getSummary() : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>0</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Recipe Service
+--
+
+--
++ addRecipe(recipe)
++ getRecipe(id)
++ updateRecipe(recipe)
++ deleteRecipe(id)
++ searchRecipes(query)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>182</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Recipe Repository
+--
+
+--
++ create(recipe)
++ read(id)
++ update(recipe)
++ delete(id)
++ query(criteria)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>518</x>
+      <y>371</y>
+      <w>147</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Cache Manager
+--
+
+--
++ get(id)
++ put(recipe)
++ invalidate(id)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>112</y>
+      <w>42</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+		Uses</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>294</y>
+      <w>70</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+		  Uses</panel_attributes>
+    <additional_attributes>10.0;110.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>707</x>
+      <y>399</y>
+      <w>147</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>DataBase
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>294</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+		  CRUD Operations</panel_attributes>
+    <additional_attributes>60.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
