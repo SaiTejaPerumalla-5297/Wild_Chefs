@@ -21,7 +21,8 @@ p {
 .fancy-link {
   position: relative;
   display: inline-block;
-  color: #dc2626; /* deep red */
+  color: #dc2626;
+  /* deep red */
   text-decoration: none;
   font-weight: 600;
   font-size: 1.05rem;
@@ -65,6 +66,12 @@ a:not(.fancy-link):hover {
   text-decoration: underline;
 }
 
+.profspeak {
+  color: darkslateblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: bold;
+}
 .contribution-list {
   list-style: none;
   padding: 0;
