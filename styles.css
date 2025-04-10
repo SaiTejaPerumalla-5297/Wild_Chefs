@@ -72,6 +72,10 @@ a:not(.fancy-link):hover {
   font-size: large;
   font-weight: bold;
 }
+/* ===================== */
+/* Contribution List Style */
+/* ===================== */
+
 .contribution-list {
   list-style: none;
   padding: 0;
@@ -101,3 +105,4 @@ a:not(.fancy-link):hover {
   line-height: 1.5;
   color: #374151;
 }
+
