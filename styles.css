@@ -1,43 +1,66 @@
-h1 {
-background-color: cyan;
-color: darkred;
-
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  background-color: #fef9f6;
+  color: #333;
 }
 
-body{
-    background-color: aliceblue;
-    text-align: center;
+h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
 }
 
-/* styles.css */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
 .fancy-link {
-    position: relative;
-    display: inline-block;
-    color: #1d4ed8; /* Tailwind blue-700 */
-    text-decoration: none;
-    font-weight: 600;
-    padding-bottom: 2px;
-    transition: color 0.3s ease;
-  }
-  
-  .fancy-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #1d4ed8;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-  
-  .fancy-link:hover {
-    color: #2563eb; /* Tailwind blue-600 */
-  }
-  
-  .fancy-link:hover::after {
-    transform: scaleX(1);
-  }
-  
+  position: relative;
+  display: inline-block;
+  color: #dc2626; /* deep red */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0.5rem 0;
+  transition: color 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.fancy-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #dc2626;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.fancy-link:hover {
+  color: #b91c1c;
+}
+
+.fancy-link:hover::after {
+  transform: scaleX(1);
+}
+
+a:not(.fancy-link) {
+  display: inline-block;
+  margin: 0.5rem 0;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:not(.fancy-link):hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
