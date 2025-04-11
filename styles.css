@@ -1,21 +1,80 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 2rem;
-  background-color: #fef9f6;
+  background: #fffaf4;
   color: #333;
+  padding: 2rem;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #dc2626;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 h2 {
-  font-size: 2rem;
-  color: #1f2937;
+  font-size: 1.75rem;
   margin-bottom: 1rem;
+  color: #1f2937;
 }
 
-p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  line-height: 1.5;
+section {
+  margin: 3rem 0;
+}
+
+.team-links a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border: 2px solid #dc2626;
+  border-radius: 0.4rem;
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.team-links a:hover {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.project-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-list li {
+  margin: 0.75rem 0;
+}
+
+.project-list a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+  color: #6b7280;
 }
 
 .fancy-link {
