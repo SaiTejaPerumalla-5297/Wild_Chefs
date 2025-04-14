@@ -42,6 +42,7 @@ section {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* TEAM LINKS STYLING */
 .team-links {
   display: flex;
   flex-wrap: wrap;
@@ -51,27 +52,35 @@ section {
 }
 
 .team-links a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  border-radius: 9999px; /* pill-shaped */
-  background-color: #f3f4f6; /* soft gray */
-  color: #374151; /* slate text */
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #f3f4f6, #f9fafb);
+  color: #374151;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   border: 1px solid transparent;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.team-links a::before {
+  content: "👤";
+  font-size: 1.1rem;
 }
 
 .team-links a:hover {
-  background-color: #e5e7eb; /* slightly darker gray */
-  color: #111827; /* darker slate */
-  border-color: #d1d5db;
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  color: #0c4a6e;
+  border-color: #7dd3fc;
   transform: translateY(-1px);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-
+/* PROJECT LINKS STYLING */
 .project-list {
   list-style: none;
   padding-left: 0;
@@ -95,98 +104,10 @@ section {
   border-bottom: 2px solid #1e3a8a;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   margin-top: 4rem;
   font-size: 0.95rem;
   color: #6b7280;
 }
-
-.fancy-link {
-  position: relative;
-  display: inline-block;
-  color: #dc2626;
-  /* deep red */
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin: 0.5rem 0;
-  transition: color 0.3s ease;
-  padding-bottom: 2px;
-}
-
-.fancy-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #dc2626;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.fancy-link:hover {
-  color: #b91c1c;
-}
-
-.fancy-link:hover::after {
-  transform: scaleX(1);
-}
-
-a:not(.fancy-link) {
-  display: inline-block;
-  margin: 0.5rem 0;
-  color: #1d4ed8;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-a:not(.fancy-link):hover {
-  color: #2563eb;
-  text-decoration: underline;
-}
-
-.profspeak {
-  color: darkslateblue;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: large;
-  font-weight: bold;
-}
-/* ===================== */
-/* Contribution List Style */
-/* ===================== */
-
-.contribution-list {
-  list-style: none;
-  padding: 0;
-  max-width: 700px;
-  margin: 2rem auto;
-}
-
-.contribution-list li {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-left: 5px solid #dc2626;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-}
-
-.contribution-list h3 {
-  margin: 0 0 0.5rem;
-  color: #1f2937;
-  font-size: 1.25rem;
-}
-
-.contribution-list p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #374151;
-}
-
