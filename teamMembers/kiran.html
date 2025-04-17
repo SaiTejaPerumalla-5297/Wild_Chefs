@@ -2,22 +2,150 @@
 <html lang="en">
 
 <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kiran Page</title>
+    <title>Kiran Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf6f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 36px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .recipe-button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            text-align: left;
+        }
+
+        .recipe-button:hover {
+            background-color: #218838;
+        }
+
+        .recipe-content {
+            display: none;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background-color: #fff7ec;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        em {
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <ul>
-        <li>
-            <h2>building the repo</h2>I learned alot about "git hub"<br>
-        <li class="profspeak">GitHub*</li>
-        </li>
-        <li>
-            <h2>CLI learns </h2>"I learned alot about cli commands"<br>
-        <li class="profspeak">What did you learn? List three commands and tell me how you are using them.</li>
-        </li>
-    </ul>
+
+    <h1>Wild Chefs!!</h1>
+
+    <!-- Recipe 1 -->
+    <button class="recipe-button" onclick="toggleContent('recipe1')">🍋 Grandma’s South Indian Lemon Rice</button>
+    <div id="recipe1" class="recipe-content">
+        <p><strong>By:</strong> Meera from Chennai, India<br>
+            <strong>Cuisine:</strong> South Indian</p>
+        <p><em>"This tangy and comforting dish reminds me of summer lunches at home."</em></p>
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+            <li>2 cups cooked rice</li>
+            <li>2 tbsp lemon juice</li>
+            <li>1 tsp mustard seeds</li>
+            <li>1/2 tsp turmeric</li>
+            <li>2 green chilies (sliced)</li>
+            <li>6–8 curry leaves</li>
+            <li>2 tbsp roasted peanuts</li>
+            <li>Salt to taste</li>
+            <li>1 tbsp oil</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+            <li>Heat oil in a pan and add mustard seeds.</li>
+            <li>Add curry leaves, green chilies, and turmeric.</li>
+            <li>Add rice, lemon juice, and salt. Mix gently.</li>
+            <li>Top with roasted peanuts and serve warm.</li>
+        </ol>
+    </div>
+
+    <!-- Recipe 2 -->
+    <button class="recipe-button" onclick="toggleContent('recipe2')">🍝 Italian-Inspired Pantry Pasta</button>
+    <div id="recipe2" class="recipe-content">
+        <p><strong>By:</strong> Luca from Milan, Italy<br>
+            <strong>Cuisine:</strong> Italian Fusion</p>
+        <p><em>"A simple and flavorful meal made from whatever's in the kitchen!"</em></p>
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+            <li>200g spaghetti</li>
+            <li>2 tbsp olive oil</li>
+            <li>3 garlic cloves (sliced)</li>
+            <li>1 cup cherry tomatoes</li>
+            <li>1/2 tsp chili flakes</li>
+            <li>Basil (fresh or dried)</li>
+            <li>Parmesan cheese (optional)</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+            <li>Boil spaghetti until al dente.</li>
+            <li>Heat olive oil and sauté garlic.</li>
+            <li>Add cherry tomatoes, chili flakes, salt, and pepper.</li>
+            <li>Mix in cooked pasta and basil. Top with Parmesan if desired.</li>
+        </ol>
+    </div>
+
+    <!-- Recipe 3 -->
+    <button class="recipe-button" onclick="toggleContent('recipe3')">🍳 Quick Korean Kimchi Fried Rice</button>
+    <div id="recipe3" class="recipe-content">
+        <p><strong>By:</strong> Min-Ji from Seoul, South Korea<br>
+            <strong>Cuisine:</strong> Korean</p>
+        <p><em>"Perfect way to use leftover rice — spicy, quick, and satisfying!"</em></p>
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+            <li>1.5 cups cooked rice</li>
+            <li>1 cup chopped kimchi</li>
+            <li>1 tbsp gochujang (Korean chili paste)</li>
+            <li>1 tsp soy sauce</li>
+            <li>1 tsp sesame oil</li>
+            <li>1 egg (optional)</li>
+            <li>Spring onions for garnish</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+            <li>Heat sesame oil in a pan.</li>
+            <li>Add kimchi and gochujang, cook for 2 minutes.</li>
+            <li>Stir in rice and soy sauce. Mix well.</li>
+            <li>(Optional) Top with a fried egg. Garnish with spring onions.</li>
+        </ol>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
 </body>
 
 </html>
