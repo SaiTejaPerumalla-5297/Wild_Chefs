@@ -18,7 +18,7 @@
         }
 
         h2 {
-            color: #e67e22; /* Carrot orange */
+            color: #e67e22;
             margin-top: 30px;
         }
 
@@ -32,6 +32,21 @@
             border-left: 6px solid #e67e22;
             border-radius: 5px;
         }
+
+        .back-button-bottom {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 40px;
+        }
+
+        .back-button-bottom:hover {
+            background-color: #c0392b;
+        }
     </style>
 </head>
 
@@ -39,6 +54,7 @@
     <header>
         <h1>🌟 Wild Chefs Highlights</h1>
     </header>
+
     <ul>
         <li>
             <h2>building the repo</h2>I learned alot about "git commit"<br>
@@ -70,6 +86,10 @@
             <p>The goal of Kent Beck's Empirical Software Design is to adjust based on feedback from the real world. It encourages iterative development, continuous learning, and design refinement based on experience rather than depending on strict plans.</p>
         </section>
     </main>
+
+    <!-- Normal Button to Exit Web Page -->
+    <button class="back-button-bottom" onclick="window.location.href='https://www.google.com'">🔚 Exit Page</button>
+
 </body>
 
 </html>
