@@ -1,91 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wild Chefs – Why It’s Useful</title>
+  <title>Reflection & Wild Chefs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    :root {
+      --primary-color: #6c63ff;
+      --accent-color: #2a9d8f;
+      --light-bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --text-dark: #2d2d2d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fffaf0;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light-bg);
+      color: var(--text-dark);
       padding: 20px;
-      line-height: 1.7;
     }
 
     h1 {
-      color: #2a7ae2;
-      background-color: #e0f0ff;
-      padding: 15px;
-      border-radius: 12px;
       text-align: center;
-      font-size: 36px;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 20px;
+      border-radius: 16px;
       margin-bottom: 30px;
+      font-size: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .section p, .section code {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
     }
 
     .feature {
-      background-color: #f0fff4;
-      border-left: 6px solid #28a745;
+      border-left: 5px solid var(--accent-color);
+      background-color: #e8fdf5;
       padding: 20px;
       margin-bottom: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
-    .feature h2 {
-      margin-top: 0;
-      color: #28a745;
-      font-size: 24px;
-    }
-
-    .feature span {
-      font-size: 26px;
-      margin-right: 10px;
+    .feature h3 {
+      color: var(--accent-color);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
 
     .feature p {
-      margin: 10px 0 0;
-      font-size: 17px;
+      font-size: 1rem;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--primary-color);
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #574dcf;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.25rem;
+      }
+
+      .feature h3 {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
-
 <body>
 
-        <li>
-        <h2><p style="color: red;">Building the Repo</p>  
-          </h2><br> I Learned alot about merge and deletion<br>
-          <h2>Any difficulties with a merge? Merges are kind of unavoidable, but good team flow and informal communication helps alot.</h2><br>
-          <h3>Iam new to the git hub and learning about the commands now, in that process i kind of faced difficulty while merging my code with other team members, going forward will work with my team collectively.</h3>
-        </li>
-        <li>
-            <h2><p style="color: red;">CLI Learns</p>
-              </h2> Learned about CLI commands and how we are merging and Deleting files<br>
-             <h2>What was the most useful CLI command you learned? Look up some additional shortcuts, try one new one and write about your experience here.</h2><br>
-             <h3>Today, I tried using the !! command, which repeats the last command you ran. It’s surprisingly handy, especially when you forget to prepend sudo to a command. <br>
-              $ apt update
-              Permission denied
-              $ sudo !!
-             <br>At first, it felt a little odd trusting a "magic" shortcut, but after a few tries, I realized how much time it saves. It prevents retyping and is especially useful during package installations or system-level operations. It also makes me feel more efficient—like I’m speaking the computer’s native language.</h3> 
-        </li>
-    </ul>
-   <h1>🌎 Wild Chefs – Why It’s Useful</h1>
-  <ul>
+  <h1>📝 My Git & CLI Reflection</h1>
+
+  <div class="section">
+    <h2>🔧 Building the Repo</h2>
+    <p>Learning Git has been a journey — especially when it comes to merges and file deletions. Being new to GitHub, I faced challenges while collaborating, but I’ve realized that clear communication and teamwork really ease the merge process. Looking forward, I’ll stay more synced with my team.</p>
+  </div>
+
+  <div class="section">
+    <h2>💻 CLI Commands</h2>
+    <p>A cool command I learned is <code>!!</code> — it repeats your last command. For example:</p>
+    <code>
+      $ apt update <br>
+      Permission denied <br>
+      $ sudo !!
+    </code>
+    <p>This little trick saves time and makes me feel like I'm speaking fluent terminal!</p>
+  </div>
+
+  <div class="section">
+    <h2>📘 Kent Beck’s Empirical Software Design</h2>
+    <p>Kent Beck’s approach to software design is centered on adapting to feedback over time. Instead of upfront rigid planning, he emphasizes learning from real-world results, iterating frequently, and evolving your design as you go.</p>
+  </div>
+
+  <h1>🌎 Wild Chefs – Why It’s Useful</h1>
+
   <div class="feature">
-    <h2><span>🍽️</span>Explore and share recipes from around the world</h2>
-    <p>Wild Chefs allows users to discover authentic dishes from different cultures, shared by real people. Whether you're looking for traditional Indian biryani, Japanese sushi, or French crepes, you can find recipes created and used by locals — and also share your own favorites with the global community.</p>
+    <h3><i class="fas fa-utensils"></i> Explore and Share Recipes Worldwide</h3>
+    <p>Wild Chefs is a hub of authentic, user-submitted recipes from all over the world. Whether it's Mexican tacos or Korean bibimbap, discover and contribute global flavors.</p>
   </div>
 
   <div class="feature">
-    <h2><span>👨‍🍳</span>Learn to cook in real-time with others</h2>
-    <p>With features like <strong>live cook-alongs</strong>, <strong>voice/video chat</strong>, and step-by-step guidance, users can cook alongside others in real time. It feels like being in the same kitchen, even if you're on different continents — perfect for beginners, friends, or anyone who loves social cooking.</p>
+    <h3><i class="fas fa-video"></i> Cook Together in Real-Time</h3>
+    <p>Join live cook-alongs and video chat with others as you prepare meals together. Learn, laugh, and cook no matter where you are!</p>
   </div>
 
   <div class="feature">
-    <h2><span>🥕</span>Find meals you can make using ingredients at home</h2>
-    <p>Instead of running to the store, just enter the ingredients you already have into the app. Wild Chefs will suggest recipes that match what’s in your kitchen, helping you save time, reduce food waste, and try creative new dishes without needing extra shopping.</p>
+    <h3><i class="fas fa-carrot"></i> Smart Ingredient Matching</h3>
+    <p>Enter what’s in your fridge, and Wild Chefs suggests recipes you can make right away. It helps cut down food waste while sparking creativity in the kitchen.</p>
   </div>
- 
+
+  <div class="btn-container">
+    <a href="../index.html"><button class="btn">🏠 Go Back Home</button></a>
+  </div>
+
 </body>
-<a href="../index.html"><button>HOME</button>
 </html>
+
