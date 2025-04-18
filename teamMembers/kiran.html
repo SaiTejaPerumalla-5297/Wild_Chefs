@@ -4,70 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Page</title>
-    <st<yle>
+    <title>Wild Chefs - Kiran's Recipes</title>
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --accent: #FFE66D;
+            --dark: #292F36;
+            --light: #F7FFF7;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fdf6f0;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
             padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         h1 {
-            background-color: #007bff;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            padding: 15px 25px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 15px;
             text-align: center;
-            font-size: 36px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            font-size: 2.5rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1::after {
+            content: "🍳";
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
         }
 
         .recipe-button {
-            background-color: #28a745;
+            background: linear-gradient(to right, var(--secondary), var(--primary));
             color: white;
-            padding: 12px 20px;
+            padding: 15px 25px;
             margin: 15px 0;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 1.2rem;
             font-weight: bold;
             width: 100%;
             text-align: left;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
         }
 
         .recipe-button:hover {
-            background-color: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .recipe-button::before {
+            content: "➕";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .recipe-button.active::before {
+            content: "➖";
         }
 
         .recipe-content {
             display: none;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            background-color: #fff7ec;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px 0 30px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary);
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .recipe-content p:first-child {
+            color: var(--primary);
+            font-weight: bold;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 10px;
         }
 
         em {
-            color: #555;
+            color: #666;
+            font-style: italic;
+            display: block;
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        strong {
+            color: var(--dark);
         }
 
         .back-button {
-            margin-top: 30px;
+            margin-top: 40px;
             display: inline-block;
-            background-color: #6c757d;
+            background: linear-gradient(to right, #6c757d, #495057);
             color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
+            padding: 12px 25px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .back-button:hover {
-            background-color: #5a6268;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(to right, #495057, #343a40);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+                padding: 15px;
+            }
+            
+            h1::after {
+                font-size: 1.5rem;
+                right: 15px;
+            }
+            
+            .recipe-button {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
         }
     </style>
 </head>
@@ -77,11 +169,11 @@
     <h1>Wild Chefs!!</h1>
 
     <!-- Recipe 1 -->
-    <button class="recipe-button" onclick="toggleContent('recipe1')">🍋 Grandma’s South Indian Lemon Rice</button>
+    <button class="recipe-button" onclick="toggleContent(this, 'recipe1')">🍋 Grandma's South Indian Lemon Rice</button>
     <div id="recipe1" class="recipe-content">
         <p><strong>By:</strong> Meera from Chennai, India<br>
             <strong>Cuisine:</strong> South Indian</p>
-        <p><em>"This tangy and comforting dish reminds me of summer lunches at home."</em></p>
+        <em>"This tangy and comforting dish reminds me of summer lunches at home."</em>
         <p><strong>Ingredients:</strong></p>
         <ul>
             <li>2 cups cooked rice</li>
@@ -104,11 +196,11 @@
     </div>
 
     <!-- Recipe 2 -->
-    <button class="recipe-button" onclick="toggleContent('recipe2')">🍝 Italian-Inspired Pantry Pasta</button>
+    <button class="recipe-button" onclick="toggleContent(this, 'recipe2')">🍝 Italian-Inspired Pantry Pasta</button>
     <div id="recipe2" class="recipe-content">
         <p><strong>By:</strong> Luca from Milan, Italy<br>
             <strong>Cuisine:</strong> Italian Fusion</p>
-        <p><em>"A simple and flavorful meal made from whatever's in the kitchen!"</em></p>
+        <em>"A simple and flavorful meal made from whatever's in the kitchen!"</em>
         <p><strong>Ingredients:</strong></p>
         <ul>
             <li>200g spaghetti</li>
@@ -130,10 +222,10 @@
     </div>
 
     <!-- Kent Beck Content -->
-    <button class="recipe-button" onclick="toggleContent('kentBeck')">📘 Kent Beck’s Empirical Software Design</button>
+    <button class="recipe-button" onclick="toggleContent(this, 'kentBeck')">📘 Kent Beck's Empirical Software Design</button>
     <div id="kentBeck" class="recipe-content">
         <p><strong>Topic:</strong> Empirical Software Design</p>
-        <p><em>"Kent Beck’s Empirical Software Design focuses on adapting through real-world feedback."</em></p>
+        <em>"Kent Beck's Empirical Software Design focuses on adapting through real-world feedback."</em>
         <p>This approach emphasizes iterative development, constant learning, and refining designs based on experience rather than rigid upfront planning.</p>
     </div>
 
@@ -141,9 +233,23 @@
     <a href="https://saitejaperumalla-5297.github.io/Wild_Chefs/" class="back-button">← Back to Main Page</a>
 
     <script>
-        function toggleContent(id) {
+        function toggleContent(button, id) {
             const content = document.getElementById(id);
-            content.style.display = (content.style.display === "block") ? "none" : "block";
+            const isShowing = content.style.display === "block";
+            
+            content.style.display = isShowing ? "none" : "block";
+            button.classList.toggle('active', !isShowing);
+            
+            // Close other open sections if needed
+            if (!isShowing) {
+                document.querySelectorAll('.recipe-content').forEach(el => {
+                    if (el.id !== id && el.style.display === "block") {
+                        el.style.display = "none";
+                        const btn = document.querySelector(`[onclick*="${el.id}"]`);
+                        btn.classList.remove('active');
+                    }
+                });
+            }
         }
     </script>
 
